@@ -9,6 +9,12 @@ ApplicationWindow {
     height: 600
     title: qsTr('Study Bible App')
 
+    Drawer {
+        id: drawer
+        width: parent.width * 0.3
+        height: parent.height
+    }
+
     StackView {
         anchors.fill: parent
         initialItem: frontPage
