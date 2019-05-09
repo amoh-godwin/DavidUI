@@ -9,6 +9,8 @@ Rectangle {
     property url bg_image: ""
     property string title: ""
 
+    signal click()
+
     Image {
         anchors.fill: parent
         source: bg_image
@@ -33,6 +35,8 @@ Rectangle {
         hoverEnabled: true
 
         onEntered: cursorShape = Qt.PointingHandCursor
+
+        onPressed: click()
 
     }
 
