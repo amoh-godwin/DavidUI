@@ -16,12 +16,17 @@ ApplicationWindow {
     }
 
     StackView {
+        id: stack
         anchors.fill: parent
         initialItem: frontPage
     }
 
     GeneralSelection {
         id: frontPage
+    }
+
+    ReadingBible {
+        id: readingBible
     }
 
 }

@@ -50,6 +50,9 @@ Component {
                 GeneralCard {
                     bg_image: "../../images/car.jpg"
                     title: "Reading Bible"
+
+                    onClick: stack.push(readingBible)
+
                 }
 
                 GeneralCard {
