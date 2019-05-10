@@ -13,6 +13,11 @@ ApplicationWindow {
         id: drawer
         width: parent.width * 0.3
         height: parent.height
+
+        background: Rectangle {
+            //
+        }
+
     }
 
     StackView {
