@@ -34,4 +34,8 @@ ApplicationWindow {
         id: readingBible
     }
 
+    VerseSelection {
+        id: verseSelection
+    }
+
 }
