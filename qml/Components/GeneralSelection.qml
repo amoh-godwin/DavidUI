@@ -37,10 +37,14 @@ Component {
         Rectangle {
             Layout.fillWidth: true
             Layout.fillHeight: true
+            color: "#ffcccc"
 
             GridLayout {
                 anchors.fill: parent
+                anchors.margins: 4
                 columns: 3
+                rowSpacing: 4
+                columnSpacing: 4
 
                 GeneralCard {
                     bg_image: "../../images/car.jpg"

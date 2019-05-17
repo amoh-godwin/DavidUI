@@ -3,29 +3,18 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 
 Rectangle {
-    width: 200
-    height: 200
-
+    Layout.fillWidth: true
+    Layout.fillHeight: true
     property url bg_image: ""
     property string title: ""
 
     signal click()
 
-    Image {
-        anchors.fill: parent
-        source: bg_image
-    }
-
     Label {
-        anchors.bottom: parent.bottom
+        anchors.centerIn: parent
         text: qsTr(title)
         horizontalAlignment: Text.AlignHCenter
-        color: "white"
-
-        background: Rectangle {
-            width: parent.width
-            color: "#44000000"
-        }
+        //color: "white"
 
     }
 
