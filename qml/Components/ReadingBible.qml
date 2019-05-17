@@ -2,13 +2,12 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.12
+import "../others"
 
 Component {
 
 
     Rectangle {
-        width: parent.width
-        height: parent.height
 
         Rectangle {
             anchors.fill: parent
@@ -29,23 +28,53 @@ Component {
 
         }
 
-        Rectangle { // NavBar
-            id: nav
-            width: parent.width
-            height: 48
-            color: "dodgerblue"
-            layer.enabled: true
-            layer.effect: DropShadow {
-                anchors.fill: nav
-                verticalOffset: 1
-                radius: 8
-                samples: 17
-                color: "#75000000"
-                source:nav
+        NavBar {
+
+            RowLayout {
+                anchors.fill: parent
+
+                ToolButton {
+                    text: qsTr("=")
+
+                    onClicked: drawer.open()
+                }
+
+                ToolButton {
+                    text: qsTr("v")
+
+                    onClicked: stack.push(verseSelection)
+
+                }
+
+                ToolButton {
+                    text: qsTr("v")
+
+                    onClicked: stack.push(verseSelection)
+
+                }
+
+                Rectangle {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    color: "transparent"
+                }
+
+                Row {
+                    ToolButton {
+                        text: qsTr("NKJV")
+                    }
+
+                    ToolButton {
+                        text: qsTr(":")
+                    }
+                }
+
+
+
+
             }
 
         }
-
 
     }
 
