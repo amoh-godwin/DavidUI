@@ -38,4 +38,8 @@ ApplicationWindow {
         id: verseSelection
     }
 
+    BookSelection {
+        id: bookSelection
+    }
+
 }
